@@ -11,6 +11,7 @@ Provides:	webclient
 License:	GPLv3
 Group:		Networking/WWW
 URL:		http://www.uzbl.org/
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 %description
 Uzbl follows the UNIX philosophy - "Write programs that do one thing
 and do it well. Write programs to work together. Write programs to handle
