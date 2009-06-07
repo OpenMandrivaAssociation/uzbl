@@ -3,9 +3,8 @@
 Name:		uzbl
 Summary:	Web browser following the UNIX philosophy
 Version:	0.0
-Release:	%mkrel 0.1.%snapshot.1
+Release:	%mkrel 0.1.%snapshot.2
 Source:		%name-%snapshot.tar.bz2
-Patch0:		%{name}-makefile_docdir.patch
 BuildRequires:	gtk2-devel webkitgtk-devel
 Provides:	webclient
 License:	GPLv3
@@ -32,7 +31,6 @@ text streams, because that is a universal interface."
 
 %prep
 %setup -q -n %name-%snapshot
-%patch0 -p1
 
 %build
 %make
@@ -41,6 +39,10 @@ text streams, because that is a universal interface."
 %{__rm} -Rf %{buildroot}
 %makeinstall_std
 
+%{__mkdir_p} %{buildroot}%{_defaultdocdir}/%{name}
+echo 'You can find uzbl documentation and example scripts in /usr/share/uzbl' > \
+	%{buildroot}%{_defaultdocdir}/%{name}/README
+
 %clean
 %{__rm} -Rf %{buildroot}
 
@@ -48,4 +50,5 @@ text streams, because that is a universal interface."
 %defattr(-,root,root)
 %{_bindir}/%{name}
 %{_bindir}/%{name}ctrl
-%{_defaultdocdir}/%{name}
+%{_datadir}/%{name}
+%{_defaultdocdir}/%{name}/README
