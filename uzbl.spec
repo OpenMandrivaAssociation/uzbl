@@ -1,9 +1,9 @@
-%define snapshot 20090606
+%define snapshot 20091130
 
 Name:		uzbl
 Summary:	Web browser following the UNIX philosophy
 Version:	0.0
-Release:	%mkrel 0.1.%snapshot.2
+Release:	%mkrel 0.1.%snapshot.1
 Source:		%name-%snapshot.tar.bz2
 BuildRequires:	gtk2-devel webkitgtk-devel
 Provides:	webclient
@@ -33,11 +33,10 @@ text streams, because that is a universal interface."
 %setup -q -n %name-%snapshot
 
 %build
-%make
-
+%make 
 %install
 %{__rm} -Rf %{buildroot}
-%makeinstall_std
+make DESTDIR=%buildroot PREFIX=%_prefix install
 
 %{__mkdir_p} %{buildroot}%{_defaultdocdir}/%{name}
 echo 'You can find uzbl documentation and example scripts in /usr/share/uzbl' > \
@@ -48,7 +47,6 @@ echo 'You can find uzbl documentation and example scripts in /usr/share/uzbl' > 
 
 %files
 %defattr(-,root,root)
-%{_bindir}/%{name}
-%{_bindir}/%{name}ctrl
+%{_bindir}/%{name}-*
 %{_datadir}/%{name}
 %{_defaultdocdir}/%{name}/README
