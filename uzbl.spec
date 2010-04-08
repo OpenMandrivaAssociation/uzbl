@@ -1,4 +1,4 @@
-%define snapshot 20091130
+%define snapshot 20100408
 
 Name:		uzbl
 Summary:	Web browser following the UNIX philosophy
