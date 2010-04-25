@@ -3,14 +3,15 @@
 Name:		uzbl
 Summary:	Web browser following the UNIX philosophy
 Version:	0.0
-Release:	%mkrel 0.1.%snapshot.1
+Release:	%mkrel 0.1.%snapshot.2
 Source:		%name-%snapshot.tar.bz2
+Requires:	xclip
 BuildRequires:	gtk2-devel webkitgtk-devel
 Provides:	webclient
 License:	GPLv3
 Group:		Networking/WWW
 URL:		http://www.uzbl.org/
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 %description
 Uzbl follows the UNIX philosophy - "Write programs that do one thing
 and do it well. Write programs to work together. Write programs to handle
