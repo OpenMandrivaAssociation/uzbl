@@ -1,10 +1,10 @@
-%define snapshot 20100408
+%define snapshot 20100805
 
 Name:		uzbl
 Summary:	Web browser following the UNIX philosophy
 Version:	0.0
-Release:	%mkrel 0.1.%snapshot.2
-Source:		%name-%snapshot.tar.bz2
+Release:	%mkrel 0.1.%snapshot.1
+Source:		%name-%snapshot.tar.xz
 Requires:	xclip
 BuildRequires:	gtk2-devel webkitgtk-devel
 Provides:	webclient
