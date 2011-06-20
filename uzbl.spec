@@ -3,7 +3,7 @@
 Name:		uzbl
 Summary:	Web browser following the UNIX philosophy
 Version:	0.0
-Release:	%mkrel 0.1.%snapshot.1
+Release:	%mkrel 0.1.%snapshot.2
 Source:		%name-%snapshot.tar.xz
 Requires:	xclip
 BuildRequires:	gtk2-devel webkitgtk-devel
