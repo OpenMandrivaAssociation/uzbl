@@ -1,9 +1,9 @@
-%define snapshot 20100805
+%define snapshot 20111128
 
 Name:		uzbl
 Summary:	Web browser following the UNIX philosophy
 Version:	0.0
-Release:	%mkrel 0.1.%snapshot.2
+Release:	%mkrel 0.1.%snapshot.1
 Source:		%name-%snapshot.tar.xz
 Requires:	xclip
 BuildRequires:	gtk2-devel webkitgtk-devel
@@ -12,6 +12,7 @@ License:	GPLv3
 Group:		Networking/WWW
 URL:		http://www.uzbl.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+
 %description
 Uzbl follows the UNIX philosophy - "Write programs that do one thing
 and do it well. Write programs to work together. Write programs to handle
@@ -35,13 +36,12 @@ text streams, because that is a universal interface."
 
 %build
 %make 
+
 %install
 %{__rm} -Rf %{buildroot}
-make DESTDIR=%buildroot PREFIX=%_prefix install
-
-%{__mkdir_p} %{buildroot}%{_defaultdocdir}/%{name}
-echo 'You can find uzbl documentation and example scripts in /usr/share/uzbl' > \
-	%{buildroot}%{_defaultdocdir}/%{name}/README
+%make DESTDIR=%buildroot PREFIX=%_prefix install
+install -d %{buildroot}%{_docdir}
+mv %{buildroot}%{_datadir}/%{name}/docs %{buildroot}%{_docdir}/%{name}
 
 %clean
 %{__rm} -Rf %{buildroot}
@@ -50,4 +50,4 @@ echo 'You can find uzbl documentation and example scripts in /usr/share/uzbl' > 
 %defattr(-,root,root)
 %{_bindir}/%{name}-*
 %{_datadir}/%{name}
-%{_defaultdocdir}/%{name}/README
+%doc %{_docdir}/%{name}/*
