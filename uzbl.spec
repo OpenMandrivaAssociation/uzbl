@@ -6,7 +6,7 @@ Version:	0.0
 Release:	%mkrel 0.1.%snapshot.1
 Source:		%name-%snapshot.tar.xz
 Requires:	xclip
-BuildRequires:	gtk2-devel webkitgtk-devel
+BuildRequires:	gtk+3-devel webkitgtk3-devel
 Provides:	webclient
 License:	GPLv3
 Group:		Networking/WWW
@@ -19,15 +19,15 @@ and do it well. Write programs to work together. Write programs to handle
 text streams, because that is a universal interface."
 
  * very minimal graphical interface. You only see what you need
- * what is not browsing, is not in uzbl. Things like url changing,
+ * what is not browsing, is not in uzbl. Things like URL changing,
    loading/saving of bookmarks, saving history, downloads, ... are
    handled through external scripts that you write
- * controllable through various means such as fifo and socket files,
+ * controllable through various means such as FIFO and socket files,
    stdin, keyboard and more
  * advanced, customizable keyboard interface with support for modes,
-   modkeys, multichars, variables (keywords) etc. (eg you can tweak the
-   interface to be vim-like, emacs-like or any-other-program-like)
- * focus on plaintext storage for your data and configs in simple,
+   modkeys, multichars, variables (keywords) etc. (e. g. you can tweak
+   the interface to be vim-like, emacs-like or any-other-program-like)
+ * focus on plain text storage for your data and configs in simple,
    parseable formats
  * Uzbl keeps it simple, and puts you in charge.
 
