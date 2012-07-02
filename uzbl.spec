@@ -1,17 +1,16 @@
-%define snapshot 20111128
+%define snapshot 20120514
 
 Name:		uzbl
 Summary:	Web browser following the UNIX philosophy
 Version:	0.0
-Release:	%mkrel 0.1.%snapshot.1
-Source:		%name-%snapshot.tar.xz
+Release:	%mkrel 0.%{snapshot}.1
+Source0:	%{name}-%{snapshot}.tar.xz
 Requires:	xclip
 BuildRequires:	gtk+3-devel webkitgtk3-devel
 Provides:	webclient
 License:	GPLv3
 Group:		Networking/WWW
 URL:		http://www.uzbl.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Uzbl follows the UNIX philosophy - "Write programs that do one thing
