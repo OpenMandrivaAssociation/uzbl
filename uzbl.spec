@@ -50,3 +50,45 @@ mv %{buildroot}%{_datadir}/%{name}/docs %{buildroot}%{_docdir}/%{name}
 %{_bindir}/%{name}-*
 %{_datadir}/%{name}
 %doc %{_docdir}/%{name}/*
+
+
+%changelog
+* Mon Jul 02 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 0.0-0.20120514.1mdv2012.0
++ Revision: 807785
+- update to 20120514 snapshot
+
+* Mon Dec 12 2011 Dmitry Mikhirev <dmikhirev@mandriva.org> 0.0-0.1.20111128.1
++ Revision: 740436
+- Use GTK+3
+- Update to 20111128
+
+* Mon Jun 20 2011 Funda Wang <fwang@mandriva.org> 0.0-0.1.20100805.2
++ Revision: 686156
+- rebuild for new webkit
+
+* Sun Aug 08 2010 Rémy Clouard <shikamaru@mandriva.org> 0.0-0.1.20100805.1mdv2011.0
++ Revision: 567760
+- new snapshot
+- use xz instead of bzip2
+
+* Sun Apr 25 2010 Rémy Clouard <shikamaru@mandriva.org> 0.0-0.1.20100408.2mdv2010.1
++ Revision: 538532
+- add xclip to match default config and clean spec
+
+* Thu Apr 08 2010 Rémy Clouard <shikamaru@mandriva.org> 0.0-0.1.20100408.1mdv2010.1
++ Revision: 533129
+- bump release
+
+* Mon Nov 30 2009 Rémy Clouard <shikamaru@mandriva.org> 0.0-0.1.20091130.1mdv2010.1
++ Revision: 472126
+- bump release
+
+* Sun Jun 07 2009 Nicolas Vigier <nvigier@mandriva.com> 0.0-0.1.20090606.2mdv2010.0
++ Revision: 383722
+- install doc and example config files in /usr/share/uzbl
+
+* Sat Jun 06 2009 Nicolas Vigier <nvigier@mandriva.com> 0.0-0.1.20090606.1mdv2010.0
++ Revision: 383376
+- import uzbl
+
+
