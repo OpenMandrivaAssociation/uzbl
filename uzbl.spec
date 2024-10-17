@@ -10,7 +10,7 @@ BuildRequires:	gtk+3-devel webkitgtk3-devel
 Provides:	webclient
 License:	GPLv3
 Group:		Networking/WWW
-URL:		http://www.uzbl.org/
+URL:		https://www.uzbl.org/
 
 %description
 Uzbl follows the UNIX philosophy - "Write programs that do one thing
