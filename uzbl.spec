@@ -6,6 +6,7 @@ Version:	0.0
 Release:	%mkrel 0.%{snapshot}.1
 Source0:	%{name}-%{snapshot}.tar.xz
 Requires:	xclip
+BuildRequires:	make
 BuildRequires:	gtk+3-devel webkitgtk3-devel
 Provides:	webclient
 License:	GPLv3
